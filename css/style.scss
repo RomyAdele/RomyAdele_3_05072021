@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.section-un {
+  &__localiser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: 30px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 100vw;
+    background: #f2f2f2;
+    box-shadow: 50px rgb(170, 170, 170);
+  }
+}
+.section-un__icone {
+  margin-right: 20px;
+}
+.section-deux {
+  margin-top: 100px;
+  justify-content: center;
+}
+
+.restaurant-card__image {
+  height: 120px;
+  width: 300px;
+  object-fit: cover;
+}
