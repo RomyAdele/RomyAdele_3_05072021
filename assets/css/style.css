@@ -81,7 +81,7 @@ header {
   font-size: 15px;
   padding: 10px 0;
   width: 100%;
-  background-color: #f6f6f6cc;
+  background-color: #f6f6f6;
 }
 
 .section-search p {
@@ -90,7 +90,6 @@ header {
 }
 
 .section-search .section-search__title {
-  border: 1px solid pink;
   font-size: x-large;
 }
 
@@ -183,7 +182,20 @@ p {
 .restaurant i {
   /*justify-content: flex-end;*/
   position: absolute;
-  font-size: x-large;
+  font-size: large;
+  border: 1px solid blue;
+}
+
+.restaurant .fa-heart::before {
+  content: "\f004";
+  /* specifie un tx, img ou guillemets à insérer en tznt que contenu */
+  font-weight: bold;
+  -webkit-transition: color 4s ease-out;
+  transition: color 4s ease-out;
+}
+
+.restaurant .fa-heart:hover::before {
+  color: pink;
 }
 
 .restaurant h3 {
@@ -192,6 +204,7 @@ p {
 
 .restaurant p {
   margin: 5px 10px 10px 10px;
+  font-weight: 300;
 }
 
 .restaurant .restaurant-card__description {
@@ -244,15 +257,16 @@ footer {
           transform: translatex(-50%);
   width: 100vw;
   background: #353535;
+  border: 1px solid blue;
 }
 
 .footer-logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 30%;
-  color: white;
-  border: 1px solid red;
+  /* defini la largeur du logo */
+  margin-bottom: 10px;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  /* filter change la couleur  et invert inverse l'echantillon dans image */
 }
 
 .footer-nav {
@@ -263,20 +277,18 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: small;
   border: 1px solid yellow;
 }
 
 .footer__nav {
   text-decoration: none;
-  margin-top: 5px;
   color: white;
-  border: 1px solid blue;
+  margin: 5px;
+  font-size: small;
+  font-weight: 500;
 }
 
 .footer__nav i {
   color: white;
-  font-size: 10px;
-  border: 1px solid pink;
 }
 /*# sourceMappingURL=style.css.map */
