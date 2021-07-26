@@ -15,6 +15,7 @@ body {
   padding: 0px 20px;
 }*/
 header {
+  /*logo*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,9 +79,9 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  font-size: 15px;
   padding: 10px 0;
   width: 100%;
+  font-size: 15px;
   background-color: #f6f6f6;
 }
 
@@ -90,10 +91,16 @@ header {
 }
 
 .section-search .section-search__title {
-  font-size: x-large;
+  font-size: xx-large;
+}
+
+.section-search__decouverte {
+  font-size: large;
 }
 
 .section-search button {
+  margin: 10px 0px 40px 0;
+  padding: 15px;
   border-radius: 40px;
   border: none;
   background-color: #9356dc;
@@ -101,8 +108,7 @@ header {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
   color: white;
-  margin: 10px 0px 40px 0;
-  padding: 15px;
+  cursor: pointer;
 }
 
 .section-operation {
@@ -150,9 +156,9 @@ h2 {
 i {
   color: #7e7e7e;
   margin: 0 25px;
-  /* :hover {
+  /* :hover { ne fonftionne pas 
     background-color: #9356dc;
-  }ne fonftionne pas */
+  }*/
 }
 
 p {
@@ -179,45 +185,7 @@ p {
   margin-bottom: 20px;
 }
 
-.restaurant i {
-  /*justify-content: flex-end;*/
-  position: absolute;
-  font-size: large;
-  border: 1px solid blue;
-}
-
-.restaurant .fa-heart::before {
-  content: "\f004";
-  /* specifie un tx, img ou guillemets à insérer en tznt que contenu */
-  font-weight: bold;
-  -webkit-transition: color 4s ease-out;
-  transition: color 4s ease-out;
-}
-
-.restaurant .fa-heart:hover::before {
-  color: pink;
-}
-
-.restaurant h3 {
-  margin: 15px 10px 10px 10px;
-}
-
-.restaurant p {
-  margin: 5px 10px 10px 10px;
-  font-weight: 300;
-}
-
-.restaurant .restaurant-card__description {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.restaurant-card__image {
+.restaurant .restaurant-card__image {
   height: 160px;
   width: 100%;
   -o-object-fit: cover;
@@ -225,12 +193,12 @@ p {
   border-radius: 15px 15px 0 0px;
 }
 
-.restaurant-card {
+.restaurant .restaurant-card {
   text-decoration: none;
   color: black;
 }
 
-.restaurant-card__new {
+.restaurant .restaurant-card__new {
   position: absolute;
   margin-left: -85px;
   margin-top: 15px;
@@ -241,7 +209,7 @@ p {
   font-weight: 600;
 }
 
-footer {
+.restaurant .restaurant-card .restaurant-card__description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -249,8 +217,41 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.restaurant .restaurant-card h3 {
+  margin: 10px 10px 0px 10px;
+}
+
+.restaurant .restaurant-card i {
+  /*justify-content: flex-end;*/
   position: absolute;
-  margin-top: 30px;
+  font-size: large;
+  border: 1px solid blue;
+}
+
+.restaurant .restaurant-card .fa-heart::before {
+  content: "\f004";
+  /* specifie un text, img ou guillemets à insérer en tant que contenu */
+  font-weight: bold;
+  -webkit-transition: color 4s ease-out;
+  transition: color 4s ease-out;
+}
+
+.restaurant .restaurant-card .fa-heart:hover::before {
+  color: pink;
+  /*background-color: linear-gradient(70deg, #ba62db, pink);*/
+}
+
+.restaurant .restaurant-card p {
+  margin: 0px 10px 10px 10px;
+  font-weight: 300;
+}
+
+footer {
+  /*display: flex;
+  flex-direction: column;*/
+  position: absolute;
   padding: 20px;
   left: 50%;
   -webkit-transform: translatex(-50%);
