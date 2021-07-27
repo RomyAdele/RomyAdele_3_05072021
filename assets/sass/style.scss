@@ -27,13 +27,15 @@ header {
 .localisation {
   display: flex;
   justify-content: center;
-  align-items: center;
   position: relative;
   &__wrapper {
     display: flex;
     align-items: center;
     i {
-      margin-right: 15px;
+      color: black;
+    }
+    p {
+      font-weight: 500;
     }
   }
   &::before {
@@ -45,7 +47,7 @@ header {
     transform: translatex(-50%); /* et tranformation vers la droite */
     width: 100vw; /* 100% de l'ecran et non du parent*/
     height: 100%;
-    background-color: #eaeaea; /*$color-light-gray;*/
+    background-color: $color-light-gray;
   }
 }
 
@@ -55,9 +57,9 @@ header {
   padding: 10px 0;
   width: 100%;
   font-size: 15px;
-  background-color: #f6f6f6;
+  background-color: $color-gray;
   p {
-    color: gray;
+    color: #949494;
     font-weight: 400;
   }
   .section-search__title {
@@ -71,122 +73,125 @@ header {
     padding: 15px;
     border-radius: 40px;
     border: none;
-    background-color: #9356dc; /*primary color*/
+    background-color: $color-primaire;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
     color: white;
     cursor: pointer;
   }
 }
 
-.section-operation {
-  border: 1px solid blue;
+.section-menu {
   padding: 30px 20px;
   :hover {
-    background-color: #f5edff;
+    background-color: #ffff;
   }
-}
-h2 {
-  font-size: 20px;
-  padding-bottom: 10px;
-}
-.number {
-  position: absolute;
-  text-align: center;
-  border-radius: 20px;
-  margin-left: -20px;
-  padding-top: 2px;
-  background-color: #9356dc;
-  color: white;
-  width: 25px;
-  height: 25px;
-}
-.card {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  margin: 20px 0px 20px 10px;
-  padding: 10px;
-  border-radius: 20px;
-  background-color: #f6f6f6;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-}
-i {
-  color: #7e7e7e;
-  margin: 0 25px;
-  /* :hover { ne fonftionne pas 
+  h2 {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+  .number {
+    position: absolute;
+    text-align: center;
+    border-radius: 20px;
+    margin-left: -20px;
+    padding-top: 2px;
+    background-color: $color-primaire;
+    color: white;
+    width: 25px;
+    height: 25px;
+  }
+  .card {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 20px 0px 20px 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: $color-gray;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  }
+  i {
+    color: #7e7e7e;
+    margin: 0 25px;
+    /* :hover { ne fonftionne pas 
     background-color: #9356dc;
   }*/
-}
-p {
-  font-weight: bold;
-  font-size: 14px;
+  }
+  p {
+    font-weight: bold;
+    font-size: 14px;
+  }
 }
 
 .section-restaurant {
+  position: relative;
   text-decoration: none;
   align-items: center;
   padding: 20px 20px;
   background-color: #f6f6f6;
   border: 1px solid peru;
-}
-
-.restaurant {
-  position: relative;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-  background-color: white;
-  border-radius: 15px;
-  margin-bottom: 20px;
-  .restaurant-card__image {
-    height: 160px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 15px 15px 0 0px;
-  }
-  .restaurant-card {
-    text-decoration: none;
-    color: black;
-    &__new {
-      position: absolute;
-      margin-left: -85px;
-      margin-top: 15px;
-      padding: 5px 10px;
-      background-color: #99e2d0;
-      color: #038868;
-      font-size: 12px;
-      font-weight: 600;
+  .restaurant {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    .restaurant-card__image {
+      height: 160px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0px;
     }
-    .restaurant-card__description {
-      display: flex;
-      flex-direction: column;
-    }
-    h3 {
-      margin: 10px 10px 0px 10px;
-    }
-    i {
-      /*justify-content: flex-end;*/
-      position: absolute;
-      font-size: large;
-      border: 1px solid blue;
-    }
-    .fa-heart::before {
-      content: "\f004"; /* specifie un text, img ou guillemets à insérer en tant que contenu */
-      font-weight: bold;
-      transition: color 4s ease-out;
-    }
-    .fa-heart:hover::before {
-      color: pink;
-      /*background-color: linear-gradient(70deg, #ba62db, pink);*/
-    }
-    p {
-      margin: 0px 10px 10px 10px;
-      font-weight: 300;
+    .restaurant-card {
+      text-decoration: none;
+      color: black;
+      &__new {
+        position: absolute;
+        margin-left: -85px;
+        margin-top: 15px;
+        padding: 5px 10px;
+        background-color: $color-tertiaire;
+        color: #038868;
+        font-size: 12px;
+        font-weight: 600;
+      }
+      .restaurant-card__description {
+        display: flex;
+        flex-direction: column;
+      }
+      h3 {
+        margin: 10px 10px 0px 10px;
+      }
+      i {
+        /*display: flex;
+        flex-direction: row;
+        justify-content: flex-end;*/
+        position: absolute;
+        right: 20px;
+        margin-top: 15px;
+        font-size: x-large;
+        padding-right: 20px;
+      }
+      .fa-heart::before {
+        content: "\f004"; /* specifie un text, img ou guillemets à insérer en tant que contenu */
+        font-weight: bold;
+        transition: color 4s ease-out;
+      }
+      .fa-heart:hover::before {
+        color: $color-primaire;
+        /*background-color: linear-gradient(70deg, #ba62db, pink);*/
+      }
+      p {
+        margin: 0px 10px 10px 10px;
+        font-weight: 300;
+      }
     }
   }
 }
 
 footer {
-  /*display: flex;
-  flex-direction: column;*/
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   position: absolute;
   padding: 20px;
   left: 50%;
@@ -194,28 +199,26 @@ footer {
   width: 100vw;
   background: #353535;
   border: 1px solid blue;
-}
-
-.footer-logo {
-  width: 30%; /* defini la largeur du logo */
-  margin-bottom: 10px;
-  filter: invert(
-    100%
-  ); /* filter change la couleur  et invert inverse l'echantillon dans image */
-}
-.footer-nav {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid yellow;
-}
-
-.footer__nav {
-  text-decoration: none;
-  color: white;
-  margin: 5px;
-  font-size: small;
-  font-weight: 500;
+  .footer-logo {
+    width: 30%; /* defini la largeur du logo */
+    margin-bottom: 20px;
+    filter: invert(
+      100%
+    ); /* filter change la couleur  et invert inverse l'echantillon dans image */
+  }
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+  }
   i {
     color: white;
+    margin-left: 0px;
+  }
+  .footer__nav {
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: white;
+    font-size: small;
+    font-weight: 500;
   }
 }

@@ -35,9 +35,6 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: relative;
 }
 
@@ -51,7 +48,11 @@ header {
 }
 
 .localisation__wrapper i {
-  margin-right: 15px;
+  color: black;
+}
+
+.localisation__wrapper p {
+  font-weight: 500;
 }
 
 .localisation::before {
@@ -71,7 +72,6 @@ header {
   /* 100% de l'ecran et non du parent*/
   height: 100%;
   background-color: #eaeaea;
-  /*$color-light-gray;*/
 }
 
 .section-search {
@@ -86,7 +86,7 @@ header {
 }
 
 .section-search p {
-  color: gray;
+  color: #949494;
   font-weight: 400;
 }
 
@@ -104,28 +104,26 @@ header {
   border-radius: 40px;
   border: none;
   background-color: #9356dc;
-  /*primary color*/
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
   color: white;
   cursor: pointer;
 }
 
-.section-operation {
-  border: 1px solid blue;
+.section-menu {
   padding: 30px 20px;
 }
 
-.section-operation :hover {
-  background-color: #f5edff;
+.section-menu :hover {
+  background-color: #ffff;
 }
 
-h2 {
+.section-menu h2 {
   font-size: 20px;
   padding-bottom: 10px;
 }
 
-.number {
+.section-menu .number {
   position: absolute;
   text-align: center;
   border-radius: 20px;
@@ -137,7 +135,7 @@ h2 {
   height: 25px;
 }
 
-.card {
+.section-menu .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,7 +151,7 @@ h2 {
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
-i {
+.section-menu i {
   color: #7e7e7e;
   margin: 0 25px;
   /* :hover { ne fonftionne pas 
@@ -161,12 +159,13 @@ i {
   }*/
 }
 
-p {
+.section-menu p {
   font-weight: bold;
   font-size: 14px;
 }
 
 .section-restaurant {
+  position: relative;
   text-decoration: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -176,8 +175,7 @@ p {
   border: 1px solid peru;
 }
 
-.restaurant {
-  position: relative;
+.section-restaurant .restaurant {
   -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
   background-color: white;
@@ -185,7 +183,7 @@ p {
   margin-bottom: 20px;
 }
 
-.restaurant .restaurant-card__image {
+.section-restaurant .restaurant .restaurant-card__image {
   height: 160px;
   width: 100%;
   -o-object-fit: cover;
@@ -193,12 +191,12 @@ p {
   border-radius: 15px 15px 0 0px;
 }
 
-.restaurant .restaurant-card {
+.section-restaurant .restaurant .restaurant-card {
   text-decoration: none;
   color: black;
 }
 
-.restaurant .restaurant-card__new {
+.section-restaurant .restaurant .restaurant-card__new {
   position: absolute;
   margin-left: -85px;
   margin-top: 15px;
@@ -209,7 +207,7 @@ p {
   font-weight: 600;
 }
 
-.restaurant .restaurant-card .restaurant-card__description {
+.section-restaurant .restaurant .restaurant-card .restaurant-card__description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -219,18 +217,22 @@ p {
           flex-direction: column;
 }
 
-.restaurant .restaurant-card h3 {
+.section-restaurant .restaurant .restaurant-card h3 {
   margin: 10px 10px 0px 10px;
 }
 
-.restaurant .restaurant-card i {
-  /*justify-content: flex-end;*/
+.section-restaurant .restaurant .restaurant-card i {
+  /*display: flex;
+        flex-direction: row;
+        justify-content: flex-end;*/
   position: absolute;
-  font-size: large;
-  border: 1px solid blue;
+  right: 20px;
+  margin-top: 15px;
+  font-size: x-large;
+  padding-right: 20px;
 }
 
-.restaurant .restaurant-card .fa-heart::before {
+.section-restaurant .restaurant .restaurant-card .fa-heart::before {
   content: "\f004";
   /* specifie un text, img ou guillemets à insérer en tant que contenu */
   font-weight: bold;
@@ -238,19 +240,27 @@ p {
   transition: color 4s ease-out;
 }
 
-.restaurant .restaurant-card .fa-heart:hover::before {
-  color: pink;
+.section-restaurant .restaurant .restaurant-card .fa-heart:hover::before {
+  color: #9356dc;
   /*background-color: linear-gradient(70deg, #ba62db, pink);*/
 }
 
-.restaurant .restaurant-card p {
+.section-restaurant .restaurant .restaurant-card p {
   margin: 0px 10px 10px 10px;
   font-weight: 300;
 }
 
 footer {
-  /*display: flex;
-  flex-direction: column;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   position: absolute;
   padding: 20px;
   left: 50%;
@@ -261,16 +271,16 @@ footer {
   border: 1px solid blue;
 }
 
-.footer-logo {
+footer .footer-logo {
   width: 30%;
   /* defini la largeur du logo */
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   -webkit-filter: invert(100%);
           filter: invert(100%);
   /* filter change la couleur  et invert inverse l'echantillon dans image */
 }
 
-.footer-nav {
+footer .footer-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -278,18 +288,18 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 1px solid yellow;
 }
 
-.footer__nav {
-  text-decoration: none;
+footer i {
   color: white;
-  margin: 5px;
+  margin-left: 0px;
+}
+
+footer .footer__nav {
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: white;
   font-size: small;
   font-weight: 500;
-}
-
-.footer__nav i {
-  color: white;
 }
 /*# sourceMappingURL=style.css.map */
