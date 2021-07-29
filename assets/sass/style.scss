@@ -8,12 +8,11 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  cursor: pointer;
 }
 
-/*main {
-  padding: 0px 20px;
-}*/
+main {
+  padding: 0px 0px;
+}
 
 header {
   /*logo*/
@@ -32,12 +31,11 @@ header {
     display: flex;
     align-items: center;
     i {
-      color: black;
-      padding-right: 20px;
+      color: $color-text;
+      margin-right: 10px;
     }
     p {
       font-weight: 500;
-      padding-right: 30px;
     }
   }
   &::before {
@@ -49,7 +47,7 @@ header {
     transform: translatex(-50%); /* et tranformation vers la droite */
     width: 100vw; /* 100% de l'ecran et non du parent*/
     height: 100%;
-    background-color: $color-light-gray;
+    background-color: $color-back-localisation;
   }
 }
 
@@ -58,8 +56,7 @@ header {
   text-align: center;
   padding: 10px 0;
   width: 100%;
-  font-size: 15px;
-  background-color: $color-gray;
+  background-color: $color-back-gray;
   p {
     color: #949494;
     font-weight: 400;
@@ -77,31 +74,20 @@ header {
     border: none;
     background-color: $color-primaire;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
-    color: white;
+    color: $color-white;
     cursor: pointer;
   }
 }
 
 .section-menu {
-  padding: 30px 20px;
-  :hover {
-    background-color: #ffff;
-  }
+  /* padding: 30px 20px;*/
+  margin: 30px 20px;
+
   h2 {
     font-size: 20px;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
   }
-  .number {
-    position: absolute;
-    text-align: center;
-    border-radius: 20px;
-    margin-left: -20px;
-    padding-top: 2px;
-    background-color: $color-primaire;
-    color: white;
-    width: 25px;
-    height: 25px;
-  }
+
   .card {
     display: flex;
     text-align: center;
@@ -109,19 +95,35 @@ header {
     margin: 20px 0px 20px 10px;
     padding: 10px;
     border-radius: 20px;
-    background-color: $color-gray;
+    background-color: $color-back-gray;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-  }
-  i {
-    color: #7e7e7e;
-    margin: 0 25px;
-    /* :hover { ne fonftionne pas 
-    background-color: #9356dc;
-  }*/
-  }
-  p {
-    font-weight: bold;
-    font-size: 14px;
+    cursor: pointer;
+
+    .number {
+      position: absolute;
+      text-align: center;
+      border-radius: 20px;
+      margin-left: -20px;
+      padding-top: 2px;
+      background-color: $color-primaire;
+      color: white;
+      width: 25px;
+      height: 25px;
+    }
+    i {
+      color: #7e7e7e;
+      margin: 0 25px;
+    }
+    p {
+      font-weight: bold;
+      font-size: 14px;
+    }
+    &:hover {
+      background-color: $color-hover;
+      i {
+        color: $color-primaire;
+      }
+    }
   }
 }
 
@@ -129,12 +131,12 @@ header {
   position: relative;
   text-decoration: none;
   align-items: center;
-  padding: 20px 20px;
-  background-color: #f6f6f6;
-  border: 1px solid peru;
+  padding: 20px 20px; /* ne peut pas etre retiré*/
+  background-color: $color-back-gray;
   .restaurant {
+    position: relative;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-    background-color: white;
+    background-color: $color-white;
     border-radius: 15px;
     margin-bottom: 20px;
     .restaurant-card__image {
@@ -145,14 +147,14 @@ header {
     }
     .restaurant-card {
       text-decoration: none;
-      color: black;
+      color: $color-text;
       &__new {
         position: absolute;
-        margin-left: -85px;
-        margin-top: 15px;
+        top: 15px;
+        right: 15px;
         padding: 5px 10px;
         background-color: $color-tertiaire;
-        color: #038868;
+        color: $color-new;
         font-size: 12px;
         font-weight: 600;
       }
@@ -166,14 +168,12 @@ header {
         font-size: 16px;
       }
       i {
-        /*display: flex;
-        flex-direction: row;
-        justify-content: flex-end;*/
+        /*coeur*/
         position: absolute;
         right: 20px;
         margin-top: 15px;
         font-size: x-large;
-        padding-right: 20px;
+        margin-right: 20px;
       }
       .fa-heart::before {
         content: "\f004"; /* specifie un text, img ou guillemets à insérer en tant que contenu */
@@ -201,8 +201,7 @@ footer {
   left: 50%;
   transform: translatex(-50%);
   width: 100vw;
-  background: #353535;
-  border: 1px solid blue;
+  background: $color-back-footer;
   .footer-logo {
     width: 30%; /* defini la largeur du logo */
     margin-bottom: 20px;
@@ -215,13 +214,13 @@ footer {
     flex-direction: column;
   }
   i {
-    color: white;
+    color: $color-white;
     margin-right: 10px;
   }
   .footer__nav {
     text-decoration: none;
     margin-bottom: 10px;
-    color: white;
+    color: $color-white;
     font-size: small;
     font-weight: 500;
   }

@@ -8,12 +8,12 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  cursor: pointer;
 }
 
-/*main {
-  padding: 0px 20px;
-}*/
+main {
+  padding: 0px 0px;
+}
+
 header {
   /*logo*/
   display: -webkit-box;
@@ -48,13 +48,12 @@ header {
 }
 
 .localisation__wrapper i {
-  color: black;
-  padding-right: 20px;
+  color: #000000;
+  margin-right: 10px;
 }
 
 .localisation__wrapper p {
   font-weight: 500;
-  padding-right: 30px;
 }
 
 .localisation::before {
@@ -83,7 +82,6 @@ header {
   text-align: center;
   padding: 10px 0;
   width: 100%;
-  font-size: 15px;
   background-color: #f6f6f6;
 }
 
@@ -108,33 +106,18 @@ header {
   background-color: #9356dc;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
-  color: white;
+  color: #ffff;
   cursor: pointer;
 }
 
 .section-menu {
-  padding: 30px 20px;
-}
-
-.section-menu :hover {
-  background-color: #ffff;
+  /* padding: 30px 20px;*/
+  margin: 30px 20px;
 }
 
 .section-menu h2 {
   font-size: 20px;
-  padding-bottom: 10px;
-}
-
-.section-menu .number {
-  position: absolute;
-  text-align: center;
-  border-radius: 20px;
-  margin-left: -20px;
-  padding-top: 2px;
-  background-color: #9356dc;
-  color: white;
-  width: 25px;
-  height: 25px;
+  margin-bottom: 10px;
 }
 
 .section-menu .card {
@@ -151,19 +134,37 @@ header {
   background-color: #f6f6f6;
   -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 
-.section-menu i {
+.section-menu .card .number {
+  position: absolute;
+  text-align: center;
+  border-radius: 20px;
+  margin-left: -20px;
+  padding-top: 2px;
+  background-color: #9356dc;
+  color: white;
+  width: 25px;
+  height: 25px;
+}
+
+.section-menu .card i {
   color: #7e7e7e;
   margin: 0 25px;
-  /* :hover { ne fonftionne pas 
-    background-color: #9356dc;
-  }*/
 }
 
-.section-menu p {
+.section-menu .card p {
   font-weight: bold;
   font-size: 14px;
+}
+
+.section-menu .card:hover {
+  background-color: #f5edff;
+}
+
+.section-menu .card:hover i {
+  color: #9356dc;
 }
 
 .section-restaurant {
@@ -173,14 +174,15 @@ header {
       -ms-flex-align: center;
           align-items: center;
   padding: 20px 20px;
+  /* ne peut pas etre retiré*/
   background-color: #f6f6f6;
-  border: 1px solid peru;
 }
 
 .section-restaurant .restaurant {
+  position: relative;
   -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-  background-color: white;
+  background-color: #ffff;
   border-radius: 15px;
   margin-bottom: 20px;
 }
@@ -195,13 +197,13 @@ header {
 
 .section-restaurant .restaurant .restaurant-card {
   text-decoration: none;
-  color: black;
+  color: #000000;
 }
 
 .section-restaurant .restaurant .restaurant-card__new {
   position: absolute;
-  margin-left: -85px;
-  margin-top: 15px;
+  top: 15px;
+  right: 15px;
   padding: 5px 10px;
   background-color: #99e2d0;
   color: #038868;
@@ -226,14 +228,12 @@ header {
 }
 
 .section-restaurant .restaurant .restaurant-card i {
-  /*display: flex;
-        flex-direction: row;
-        justify-content: flex-end;*/
+  /*coeur*/
   position: absolute;
   right: 20px;
   margin-top: 15px;
   font-size: x-large;
-  padding-right: 20px;
+  margin-right: 20px;
 }
 
 .section-restaurant .restaurant .restaurant-card .fa-heart::before {
@@ -272,7 +272,6 @@ footer {
           transform: translatex(-50%);
   width: 100vw;
   background: #353535;
-  border: 1px solid blue;
 }
 
 footer .footer-logo {
@@ -295,17 +294,14 @@ footer .footer-nav {
 }
 
 footer i {
-  color: white;
+  color: #ffff;
   margin-right: 10px;
 }
 
 footer .footer__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   text-decoration: none;
   margin-bottom: 10px;
-  color: white;
+  color: #ffff;
   font-size: small;
   font-weight: 500;
 }
