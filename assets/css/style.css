@@ -178,16 +178,7 @@ header {
   background-color: #f6f6f6;
 }
 
-.section-restaurant .restaurant {
-  position: relative;
-  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-  background-color: #ffff;
-  border-radius: 15px;
-  margin-bottom: 20px;
-}
-
-.section-restaurant .restaurant .restaurant-card__image {
+.section-restaurant .restaurant-card__image {
   height: 160px;
   width: 100%;
   -o-object-fit: cover;
@@ -195,12 +186,26 @@ header {
   border-radius: 15px 15px 0 0px;
 }
 
-.section-restaurant .restaurant .restaurant-card {
+.section-restaurant .restaurant-card {
+  position: relative;
+  /* new doit etre affiché dans la photo*/
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  background-color: #ffff;
+  border-radius: 15px;
+  margin-bottom: 20px;
   text-decoration: none;
   color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.section-restaurant .restaurant .restaurant-card__new {
+.section-restaurant .restaurant-card__new {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -211,7 +216,7 @@ header {
   font-weight: 600;
 }
 
-.section-restaurant .restaurant .restaurant-card .restaurant-card__description {
+.section-restaurant .restaurant-card .restaurant-card__description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -221,35 +226,41 @@ header {
           flex-direction: column;
 }
 
-.section-restaurant .restaurant .restaurant-card h3 {
+.section-restaurant .restaurant-card h3 {
   margin: 10px 10px 5px 10px;
   font-weight: 700;
   font-size: 16px;
 }
 
-.section-restaurant .restaurant .restaurant-card i {
+.section-restaurant .restaurant-card i {
   /*coeur*/
   position: absolute;
-  right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 10px;
   margin-top: 15px;
-  font-size: x-large;
-  margin-right: 20px;
+  font-size: 20px;
+  margin-right: 10px;
+  color: #000000;
 }
 
-.section-restaurant .restaurant .restaurant-card .fa-heart::before {
+.section-restaurant .restaurant-card .fa-heart::before {
   content: "\f004";
-  /* specifie un text, img ou guillemets à insérer en tant que contenu */
-  font-weight: bold;
+  /*specifie un text, img ou guillemets à insérer en tant que contenu */
   -webkit-transition: color 4s ease-out;
   transition: color 4s ease-out;
 }
 
-.section-restaurant .restaurant .restaurant-card .fa-heart:hover::before {
+.section-restaurant .restaurant-card .fa-heart:hover::before {
   color: #9356dc;
-  /*background-color: linear-gradient(70deg, #ba62db, pink);*/
+  -webkit-transition: color 4s ease-out;
+  transition: color 4s ease-out;
+  font-weight: bold;
+  background-color: linear-gradient(70deg, #ba62db, pink);
 }
 
-.section-restaurant .restaurant .restaurant-card p {
+.section-restaurant .restaurant-card p {
   margin: 0px 10px 10px 10px;
   font-weight: 300;
 }

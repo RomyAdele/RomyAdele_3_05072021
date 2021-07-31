@@ -82,12 +82,10 @@ header {
 .section-menu {
   /* padding: 30px 20px;*/
   margin: 30px 20px;
-
   h2 {
     font-size: 20px;
     margin-bottom: 10px;
   }
-
   .card {
     display: flex;
     text-align: center;
@@ -98,7 +96,6 @@ header {
     background-color: $color-back-gray;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
     cursor: pointer;
-
     .number {
       position: absolute;
       text-align: center;
@@ -133,61 +130,64 @@ header {
   align-items: center;
   padding: 20px 20px; /* ne peut pas etre retiré*/
   background-color: $color-back-gray;
-  .restaurant {
-    position: relative;
+  .restaurant-card__image {
+    height: 160px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0px;
+  }
+  .restaurant-card {
+    position: relative; /* new doit etre affiché dans la photo*/
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
     background-color: $color-white;
     border-radius: 15px;
     margin-bottom: 20px;
-    .restaurant-card__image {
-      height: 160px;
-      width: 100%;
-      object-fit: cover;
-      border-radius: 15px 15px 0 0px;
+    text-decoration: none;
+    color: $color-text;
+    display: flex;
+    flex-direction: column;
+    &__new {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      padding: 5px 10px;
+      background-color: $color-tertiaire;
+      color: $color-new;
+      font-size: 12px;
+      font-weight: 600;
     }
-    .restaurant-card {
-      text-decoration: none;
+    .restaurant-card__description {
+      display: flex;
+      flex-direction: column;
+    }
+    h3 {
+      margin: 10px 10px 5px 10px;
+      font-weight: 700;
+      font-size: 16px;
+    }
+    i {
+      /*coeur*/
+      position: absolute;
+      display: flex;
+      right: 10px;
+      margin-top: 15px;
+      font-size: 20px;
+      margin-right: 10px;
       color: $color-text;
-      &__new {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        padding: 5px 10px;
-        background-color: $color-tertiaire;
-        color: $color-new;
-        font-size: 12px;
-        font-weight: 600;
-      }
-      .restaurant-card__description {
-        display: flex;
-        flex-direction: column;
-      }
-      h3 {
-        margin: 10px 10px 5px 10px;
-        font-weight: 700;
-        font-size: 16px;
-      }
-      i {
-        /*coeur*/
-        position: absolute;
-        right: 20px;
-        margin-top: 15px;
-        font-size: x-large;
-        margin-right: 20px;
-      }
-      .fa-heart::before {
-        content: "\f004"; /* specifie un text, img ou guillemets à insérer en tant que contenu */
-        font-weight: bold;
-        transition: color 4s ease-out;
-      }
-      .fa-heart:hover::before {
-        color: $color-primaire;
-        /*background-color: linear-gradient(70deg, #ba62db, pink);*/
-      }
-      p {
-        margin: 0px 10px 10px 10px;
-        font-weight: 300;
-      }
+    }
+    .fa-heart::before {
+      content: "\f004"; /*specifie un text, img ou guillemets à insérer en tant que contenu */
+      transition: color 4s ease-out;
+    }
+    .fa-heart:hover::before {
+      color: $color-primaire;
+      transition: color 4s ease-out;
+      font-weight: bold;
+      background-color: linear-gradient(70deg, #ba62db, pink);
+    }
+    p {
+      margin: 0px 10px 10px 10px;
+      font-weight: 300;
     }
   }
 }
