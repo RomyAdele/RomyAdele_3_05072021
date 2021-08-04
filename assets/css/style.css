@@ -91,7 +91,7 @@ header {
 }
 
 .section-search .section-search__title {
-  font-size: xx-large;
+  font-size: x-large;
 }
 
 .section-search__decouverte {
@@ -315,5 +315,19 @@ footer .footer__nav {
   color: #ffff;
   font-size: small;
   font-weight: 500;
+}
+
+/*la palette du goût */
+.background-card__image {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section-menu1 {
+  background: #f6f6f6;
+  padding: 20px;
+  border-radius: 35px 35px 0 0;
 }
 /*# sourceMappingURL=style.css.map */

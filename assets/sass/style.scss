@@ -62,7 +62,7 @@ header {
     font-weight: 400;
   }
   .section-search__title {
-    font-size: xx-large;
+    font-size: x-large;
   }
   &__decouverte {
     font-size: large;
@@ -224,4 +224,17 @@ footer {
     font-size: small;
     font-weight: 500;
   }
+}
+
+/*la palette du goût */
+.background-card__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.section-menu1 {
+  background: $color-back-gray;
+  padding: 20px;
+
+  border-radius: 35px 35px 0 0;
 }
