@@ -327,15 +327,15 @@ footer .footer__nav {
 
 .section-menu1 {
   background: #f6f6f6;
+  text-align: center;
+  /*voir avec dorian */
+  margin: 10px 0px 40px 0;
   padding: 20px 20px 50px 20px;
   border-radius: 35px 35px 0 0;
   cursor: pointer;
 }
 
 .section-menu1__button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding: 15px;
   border-radius: 40px;
   border: none;
@@ -343,6 +343,7 @@ footer .footer__nav {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
   color: #ffff;
+  cursor: pointer;
 }
 
 .section-titleheart {
@@ -371,6 +372,7 @@ footer .footer__nav {
 
 h3 {
   font-weight: normal;
+  text-align: left;
   margin: 10px 10px 5px 10px;
   font-weight: 700;
   font-size: 16px;
@@ -384,6 +386,7 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: left;
   position: relative;
   margin-bottom: 20px;
   background-color: #ffff;

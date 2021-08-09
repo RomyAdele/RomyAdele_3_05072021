@@ -234,19 +234,22 @@ footer {
 }
 .section-menu1 {
   background: $color-back-gray;
+  text-align: center; /*voir avec dorian */
+  margin: 10px 0px 40px 0;
   padding: 20px 20px 50px 20px;
   border-radius: 35px 35px 0 0;
   cursor: pointer;
-  &__button {
-    display: flex;
-    padding: 15px;
-    border-radius: 40px;
-    border: none;
-    background-color: $color-primaire;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
-    color: $color-white;
-  }
 }
+.section-menu1__button {
+  padding: 15px;
+  border-radius: 40px;
+  border: none;
+  background-color: $color-primaire;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  color: $color-white;
+  cursor: pointer;
+}
+
 .section-titleheart {
   display: flex;
   position: relative;
@@ -266,6 +269,7 @@ footer {
 }
 h3 {
   font-weight: normal;
+  text-align: left;
   margin: 10px 10px 5px 10px;
   font-weight: 700;
   font-size: 16px;
@@ -274,6 +278,7 @@ h3 {
 .section-menu1__description {
   display: flex;
   flex-direction: column;
+  text-align: left;
   position: relative;
   margin-bottom: 20px;
   background-color: $color-white;
