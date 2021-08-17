@@ -231,14 +231,15 @@ footer {
 
 /*la palette du goût */
 .background-card__image {
-  height: 100%;
+  height: 150px;
   width: 100%;
   object-fit: cover;
+  position: absolute;
+  z-index: -2;
 }
 .section-menu1 {
-  background: $color-back-gray;
+  background: /*transparent; */ $color-back-gray;
   text-align: center; /*voir avec dorian */
-  margin: 10px 0px 0px 0;
   padding: 20px 20px 50px 20px;
   border-radius: 35px 35px 0 0;
   cursor: pointer;
@@ -256,20 +257,32 @@ footer {
 .section-titleheart {
   display: flex;
   position: relative;
-  align-items: baseline;
   h2 {
-    margin: 10px 0px;
+    margin: 15px 0px;
     font-weight: bold;
+    font-size: xx-large;
+    font-style: italic;
   }
   i {
     /*prix*/
     position: absolute;
     right: 10px;
-    margin-top: 15px;
+    margin-top: 25px;
     font-size: 20px;
     color: $color-text;
   }
 }
+
+.section-menu1__choix {
+  display: flex;
+  justify-content: left;
+  border: 1px solid purple;
+  font-size: large;
+  font-weight: 400;
+  font-size: medium;
+  margin-left: 5px;
+}
+
 .section-menu1__title {
   font-weight: normal;
   text-align: left;
@@ -304,8 +317,4 @@ footer {
   margin-right: 10px;
   color: $color-text;
   border: 1px solid yellow;
-}
-.section-menu1 h3 {
-  display: flex;
-  justify-content: left;
 }
