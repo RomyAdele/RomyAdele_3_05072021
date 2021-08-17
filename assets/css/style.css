@@ -234,7 +234,12 @@ header {
   font-size: 16px;
 }
 
-.section-restaurant .restaurant-card i {
+.section-restaurant .restaurant-card p {
+  margin: 0px 10px 10px 10px;
+  font-weight: 300;
+}
+
+.fa-heart {
   /*coeur*/
   position: absolute;
   display: -webkit-box;
@@ -247,24 +252,19 @@ header {
   color: #000000;
 }
 
-.section-restaurant .restaurant-card .fa-heart::before {
+.fa-heart::before {
   content: "\f004";
   /*specifie un text, img ou guillemets à insérer en tant que contenu */
   -webkit-transition: color 4s ease-out;
   transition: color 4s ease-out;
 }
 
-.section-restaurant .restaurant-card .fa-heart:hover::before {
+.fa-heart:hover::before {
   color: #9356dc;
   -webkit-transition: color 4s ease-out;
   transition: color 4s ease-out;
   font-weight: bold;
   background-color: linear-gradient(70deg, #ba62db, pink);
-}
-
-.section-restaurant .restaurant-card p {
-  margin: 0px 10px 10px 10px;
-  font-weight: 300;
 }
 
 footer {
@@ -334,6 +334,9 @@ footer .footer__nav {
   background: #f6f6f6;
   text-align: center;
   /*voir avec dorian */
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   padding: 20px 20px 50px 20px;
   border-radius: 35px 35px 0 0;
   cursor: pointer;
@@ -381,11 +384,12 @@ footer .footer__nav {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  border: 1px solid purple;
   font-size: large;
   font-weight: 400;
   font-size: medium;
   margin-left: 5px;
+  border-bottom: 2px solid #99e2d0;
+  width: 10%;
 }
 
 .section-menu1__title {
@@ -419,7 +423,14 @@ footer .footer__nav {
 .section-menu1__description p {
   margin: 0px 10px 10px 10px;
   font-weight: 300;
+  font-size: small;
   border: 1px solid pink;
+  white-space: nowrap;
+  /* ne wrap plus à la ligne*/
+  overflow: hidden;
+  /* cache se qui dépasse */
+  text-overflow: ellipsis;
+  /*quand text dépasse rajout de 3 petits points*/
 }
 
 .section-menu1__prix {

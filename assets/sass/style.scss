@@ -167,31 +167,31 @@ header {
       font-weight: 700;
       font-size: 16px;
     }
-    i {
-      /*coeur*/
-      position: absolute;
-      display: flex;
-      right: 10px;
-      margin-top: 15px;
-      font-size: 20px;
-      margin-right: 10px;
-      color: $color-text;
-    }
-    .fa-heart::before {
-      content: "\f004"; /*specifie un text, img ou guillemets à insérer en tant que contenu */
-      transition: color 4s ease-out;
-    }
-    .fa-heart:hover::before {
-      color: $color-primaire;
-      transition: color 4s ease-out;
-      font-weight: bold;
-      background-color: linear-gradient(70deg, #ba62db, pink);
-    }
     p {
       margin: 0px 10px 10px 10px;
       font-weight: 300;
     }
   }
+}
+.fa-heart {
+  /*coeur*/
+  position: absolute;
+  display: flex;
+  right: 10px;
+  margin-top: 15px;
+  font-size: 20px;
+  margin-right: 10px;
+  color: $color-text;
+}
+.fa-heart::before {
+  content: "\f004"; /*specifie un text, img ou guillemets à insérer en tant que contenu */
+  transition: color 4s ease-out;
+}
+.fa-heart:hover::before {
+  color: $color-primaire;
+  transition: color 4s ease-out;
+  font-weight: bold;
+  background-color: linear-gradient(70deg, #ba62db, pink);
 }
 
 footer {
@@ -240,6 +240,7 @@ footer {
 .section-menu1 {
   background: /*transparent; */ $color-back-gray;
   text-align: center; /*voir avec dorian */
+  align-items: flex-end;
   padding: 20px 20px 50px 20px;
   border-radius: 35px 35px 0 0;
   cursor: pointer;
@@ -276,11 +277,12 @@ footer {
 .section-menu1__choix {
   display: flex;
   justify-content: left;
-  border: 1px solid purple;
   font-size: large;
   font-weight: 400;
   font-size: medium;
   margin-left: 5px;
+  border-bottom: 2px solid #99e2d0;
+  width: 10%;
 }
 
 .section-menu1__title {
@@ -307,7 +309,11 @@ footer {
 .section-menu1__description p {
   margin: 0px 10px 10px 10px;
   font-weight: 300;
+  font-size: small;
   border: 1px solid pink;
+  white-space: nowrap; /* ne wrap plus à la ligne*/
+  overflow: hidden; /* cache se qui dépasse */
+  text-overflow: ellipsis; /*quand text dépasse rajout de 3 petits points*/
 }
 .section-menu1__prix {
   position: absolute;
