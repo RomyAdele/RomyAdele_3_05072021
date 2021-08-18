@@ -289,8 +289,9 @@ footer {
   &::after {
     content: "";
     position: absolute;
-    border-bottom: 2px solid pink;
-    width: 30px;
+    border-bottom: 3px solid $color-check;
+    height: 20px;
+    width: 40px;
   }
 }
 
@@ -317,7 +318,7 @@ footer {
   margin: 0px 10px 10px 10px;
   font-weight: 300;
   font-size: small;
-  border: 1px solid pink;
+  border: 1px solid salmon;
   /* white-space: nowrap;  ne wrap plus à la ligne
   overflow: hidden;  cache se qui dépasse 
   text-overflow: ellipsis; /*quand text dépasse rajout de 3 petits points*/
@@ -331,7 +332,6 @@ footer {
   border: 1px solid blue;
 }
 
-  /* white-space: nowrap; /*ne wrap plus à la ligne*/
-  /*overflow: hidden; /*cache se qui dépasse */
-  /*text-overflow: ellipsis; /*quand text dépasse rajout de 3 petits points*/
-}
+/* white-space: nowrap; /*ne wrap plus à la ligne*/
+/*overflow: hidden; /*cache se qui dépasse */
+/*text-overflow: ellipsis; /*quand text dépasse rajout de 3 petits points*/

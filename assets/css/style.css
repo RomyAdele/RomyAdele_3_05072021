@@ -406,8 +406,9 @@ footer .footer__nav {
 .section-menu1__choix::after {
   content: "";
   position: absolute;
-  border-bottom: 2px solid pink;
-  width: 30px;
+  border-bottom: 3px solid #99e2d0;
+  height: 20px;
+  width: 40px;
 }
 
 .section-menu1__title {
@@ -440,7 +441,7 @@ footer .footer__nav {
   margin: 0px 10px 10px 10px;
   font-weight: 300;
   font-size: small;
-  border: 1px solid pink;
+  border: 1px solid salmon;
   /* white-space: nowrap;  ne wrap plus à la ligne
   overflow: hidden;  cache se qui dépasse 
   text-overflow: ellipsis; /*quand text dépasse rajout de 3 petits points*/
@@ -455,8 +456,9 @@ footer .footer__nav {
   margin-top: 35px;
   font-size: small;
   border: 1px solid blue;
-  /* white-space: nowrap; /*ne wrap plus à la ligne*/
-  /*overflow: hidden; /*cache se qui dépasse */
-  /*text-overflow: ellipsis; /*quand text dépasse rajout de 3 petits points*/
 }
+
+/* white-space: nowrap; /*ne wrap plus à la ligne*/
+/*overflow: hidden; /*cache se qui dépasse */
+/*text-overflow: ellipsis; /*quand text dépasse rajout de 3 petits points*/
 /*# sourceMappingURL=style.css.map */
