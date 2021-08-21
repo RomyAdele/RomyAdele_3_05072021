@@ -220,6 +220,7 @@ footer {
     color: $color-white;
     margin-right: 10px;
     font-size: 10px;
+    font-weight: 400;
   }
   .footer__nav {
     text-decoration: none;
@@ -233,10 +234,12 @@ footer {
 /*la palette du goût */
 
 .header {
-  display: flex;
-  align-items: flex-start;
   &__return {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
     color: black;
+    border: 1px solid blue;
   }
 }
 .background-card {
@@ -276,6 +279,7 @@ footer {
   i {
     font-size: 20px;
     color: $color-text;
+    margin-right: 20px;
   }
 }
 
